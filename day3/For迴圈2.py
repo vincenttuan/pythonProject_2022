@@ -4,7 +4,7 @@
 # x 固定是 1
 # y 是 1~9 的變化
 x = 1
-for y in range(1, 10): # 1..9(<10)
+for y in range(1, 10):  # 1..9(<10)
     z = x * y
     print('%d*%d=%d' % (x, y, z), end=' ')
 
