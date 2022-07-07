@@ -47,5 +47,5 @@ for i in range(1, round_value+1):
     # 7. 開盅(揭露骰子的資訊)
     print('骰子點數：', dice, ' 總和:', dice_sum, '小' if dice_sum <= 10 else '大')
 
-# 最顯示玩家餘額
+# 最後顯示玩家餘額
 print('玩家餘額：', balance)
