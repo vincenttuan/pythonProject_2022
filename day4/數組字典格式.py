@@ -12,5 +12,12 @@ for emp in employees:
     print('姓名: %s 薪資: %s' % (emp['name'], format(emp['salary'], ',')))
 
 # 請計算出員工總薪資與平均薪資各為何？
-
-
+total = 0
+for emp in employees:
+    total = total + emp['salary']
+print('總薪資：', total)
+print('總薪資：%s' % format(total, ','))  # 加上千分號
+avg = total / len(employees)
+print('平均薪資：', avg)
+print('平均薪資：', int(avg))  # 取整數
+print('平均薪資：%s' % format(int(avg), ','))  # 加上千分號
