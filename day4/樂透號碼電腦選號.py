@@ -23,5 +23,14 @@ while len(four_stars) < 4:
         four_stars.append(n)
 
 print(four_stars, len(four_stars))
+print('----------------')
+# 四星彩(數字不可重複版 II)
+# 0~9 任意取出 4 個數字, 數字不可以重複
+# 利用 set() 數組不可重複元素的特性
+four_stars = set()
+while len(four_stars) < 4:
+    n = random.randint(0, 9)
+    print('n =', n)
+    four_stars.add(n)
 
-
+print(four_stars, len(four_stars))
