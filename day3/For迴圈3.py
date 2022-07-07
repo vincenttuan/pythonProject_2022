@@ -4,10 +4,10 @@
 # ...
 # 9*1=9 9*2=18 9*3=27 ... 9*9=81
 # 雙層迴圈
-
-for x in range(1, 10):
-    for y in range(1, 10):
-        print("%d*%d=%d" % (x, y, (x * y)), end=' ')
+min_value, max_value = 1, 10
+for x in range(min_value, max_value):
+    for y in range(min_value, max_value):
+        print("%2d*%2d=%3d" % (x, y, (x * y)), end=' ')
     print()
 
 
