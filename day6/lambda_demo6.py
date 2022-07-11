@@ -16,6 +16,17 @@ print(list(result))  # 轉 list
 
 # 4. map(lambda parameter_list: expression, iterable)
 # map 轉換
+scores = [50, 80, 90, 30]  # [False, True, True, False]
+result = map(lambda x: x >= 60, scores)
+print(list(result))
+
+scores = [50, 80, 90, 30]  # [0, 1, 1, 0]
+result = map(lambda x: 1 if x >= 60 else 0, scores)
+print(list(result))
+
+
+
+
 
 
 # 5. reduce(lambda param1, param2: expression, iterable)
