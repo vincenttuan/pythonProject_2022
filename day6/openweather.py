@@ -32,7 +32,10 @@ print('濕度: %d%%' % humidity)
 # 天氣說明
 description = ow['weather'][0]['description']
 print('天氣說明: %s' % description)
-
+# 時間
+dt = ow['dt']
+dt = datetime.datetime.fromtimestamp(dt).strftime('%Y-%m-%d %H:%M:%S')
+print('時間: %s' % dt)
 
 
 
