@@ -1,0 +1,17 @@
+1. https://openweathermap.org/
+右上角 Sign In 登入/加入會員(Create an Account)
+
+2. 若是第一次加入會員要進行 email 驗證
+
+3. https://openweathermap.org/ 右上角 Sign In 登入
+
+4. 點選 API key 頁面
+   https://home.openweathermap.org/api_keys
+
+5. 建立 Key (Create key) -> 按下 Generate
+   第一次建立新 Key 要等約 20 分鐘
+
+6. https://api.openweathermap.org/data/2.5/weather?q=taipei,tw&appid=你的Key
+
+7. 開發使用的 API 文件
+   https://openweathermap.org/current#current_JSON
