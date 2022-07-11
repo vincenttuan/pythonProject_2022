@@ -53,3 +53,7 @@ print(scores)  # 預設會按照第一個值自然排序
 # 依照分數排序且由大->小
 scores = sorted(scores, key=lambda s: s[1], reverse=True)
 print(scores)
+
+# (股票代號, 價格)
+prices = [('2330.TW', 599), ('2317.TW', 108), ('3008.TW', 2080)]
+# 根據價格由大 -> 小排列
