@@ -36,7 +36,20 @@ result = reduce(lambda x, y: x + y, scores)
 # 第三次歸納: x=220, y=30: 250 <-- 歸納結束
 print(result)
 
-
 # 6. sorted(iterable, key=lambda parameter_list: expression)
+# sorted 排序
+scores = [50, 80, 90, 30]
+scores = sorted(scores)  # 自然排序: 小 -> 大
+print(scores)
+scores = sorted(scores, reverse=True)  # 大 -> 小
+print(scores)
 
-
+# (座號, 分數)
+#  [0]  [1]
+scores = [(1, 90), (3, 80), (2, 100)]
+# 依照座號排序
+scores = sorted(scores)
+print(scores)  # 預設會按照第一個值自然排序
+# 依照分數排序且由大->小
+scores = sorted(scores, key=lambda s: s[1], reverse=True)
+print(scores)
