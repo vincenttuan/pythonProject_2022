@@ -11,3 +11,4 @@ score = 55
 level = score // 10
 print(score, level, end=" ")
 level_info.get(level, lambda: print('E'))()
+#level_info.get(level, lambda: print('E'))()
