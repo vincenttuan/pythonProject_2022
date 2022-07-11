@@ -16,9 +16,19 @@ print(url)
 # 爬取網頁資料
 resp = requests.get(url)
 print(resp.status_code)  # 回應碼：200 表示 OK
-print(resp.text)  # 回應網頁文字內容
-
-
+print(type(resp.text), resp.text)  # 回應網頁文字內容
+# 將網頁文字轉換成 json 物件，如此才可以處理與分析
+ow = json.loads(resp.text)
+print(type(ow), ow)
+# 溫度/體感溫度/濕度
+temp = ow['main']['temp']  # 絕對溫度
+temp = temp - 273.15
+print('溫度: %.2f°C' % temp)
+feels_like = ow['main']['feels_like']
+feels_like = feels_like - 273.15
+print('體感溫度: %.2f°C' % feels_like)
+humidity = ow['main']['humidity']
+print('濕度: %d%%' % humidity)
 
 
 
