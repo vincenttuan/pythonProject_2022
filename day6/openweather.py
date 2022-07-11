@@ -29,6 +29,9 @@ feels_like = feels_like - 273.15
 print('體感溫度: %.2f°C' % feels_like)
 humidity = ow['main']['humidity']
 print('濕度: %d%%' % humidity)
+# 天氣說明
+description = ow['weather'][0]['description']
+print('天氣說明: %s' % description)
 
 
 
