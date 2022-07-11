@@ -56,4 +56,14 @@ print(scores)
 
 # (股票代號, 價格)
 prices = [('2330.TW', 599), ('2317.TW', 108), ('3008.TW', 2080)]
-# 根據價格由大 -> 小排列
+# 根據價格由大 -> 小排列 (請自行實作)
+prices = sorted(prices, key=lambda p: p[1], reverse=True)
+print(prices)
+
+# (股票代號, 價格, 數量)
+# 買進成本：價格 * 數量
+prices = [('2330.TW', 599, 1000), ('2317.TW', 108, 8000), ('3008.TW', 2080, 1500)]
+# 根據買進成本由大 -> 小排列
+prices = sorted(prices, key=lambda p: p[1] * p[2], reverse=True)
+print(prices)
+
