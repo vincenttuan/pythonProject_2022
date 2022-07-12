@@ -21,6 +21,6 @@ class Number:
 
 if __name__ == '__main__':
     x = Number(10)
-    x + 15
-    x - 13
+    x + 15  # 搭配 __add__
+    x - 13  # 搭配 __sub__
     print(x)
