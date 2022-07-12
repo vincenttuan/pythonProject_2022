@@ -43,8 +43,11 @@ def haversine(lon1, lat1, lon2, lat2) -> int: # 經度1，緯度1，經度2，�
 
 
 if __name__ == '__main__':
+    # 巨匠東區認證中心經緯度
+    lat, lng = 25.04195, 121.55045
     youbikes = import_data_to_youbike()
     print('筆數: %d' % len(youbikes))
     for youbike in youbikes:
-        if youbike.sbi >= 20 and youbike.bemp >= 20:
-            print(youbike)
+        d = haversine(lng, lat, youbike.lng, youbike.lat)
+        if d < 300:  # 距離巨匠東區認證中心 300 公尺內的站點資訊
+            print(d, youbike)
