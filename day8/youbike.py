@@ -2,7 +2,7 @@
 # 網址: https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json
 import json
 import requests
-
+from math import radians, cos, sin, asin, sqrt
 
 class Youbike:
     def __init__(self, sno, sna, sbi, bemp, tot, lat, lng):
@@ -29,8 +29,22 @@ def import_data_to_youbike():
     return youbikes
 
 
+# 透過經緯度計算距離的方法
+def haversine(lon1, lat1, lon2, lat2) -> int: # 經度1，緯度1，經度2，緯度2）
+    # 轉弧度
+    lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+    # 半正矢 haversine 公式
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
+    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+    c = 2 * asin(sqrt(a))
+    r = 6371 # 地球平均半徑(公里)
+    return c * r * 1000 # 單位公尺
+
+
 if __name__ == '__main__':
     youbikes = import_data_to_youbike()
     print('筆數: %d' % len(youbikes))
     for youbike in youbikes:
-        print(youbike)
+        if youbike.sbi >= 20 and youbike.bemp >= 20:
+            print(youbike)
