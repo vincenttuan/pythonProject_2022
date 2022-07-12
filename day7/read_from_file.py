@@ -1,4 +1,6 @@
-# 讀檔 -> 進行分析計算
+# 讀檔(r: read) -> 進行分析計算
+# 覆寫/寫入(w: write)
+# 新增/寫入(a: append)
 file = open('salary.txt', 'r', encoding='UTF-8')
 rows = file.readlines()
 print(type(rows), rows)
@@ -11,7 +13,7 @@ for row in rows:
     array = row.split(",")  # 透過 ',' 來切分資料
     name = array[0]  # 姓名
     salary = int(array[1])  # 薪資
-    data = {'name': name, 'salary': salary}  # dict 的格式
+    data = {'name': name, 'salary': salary}  # dict/json 的格式
     employees.append(data)  # 將 data 放入到 employees 中
 
 print(type(employees), employees)
