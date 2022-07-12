@@ -18,6 +18,15 @@ for row in rows:
 
 print(type(employees), employees)
 
+# 進行資料分析
+# 計算出薪資的總和與平均
+total = 0
+for emp in employees:
+    total += emp.get('salary')
+avg = total / len(employees)
+print('薪資總合: %d 薪資平均: %.1f' % (total, avg))
+print('薪資總合: %s 薪資平均: %s' % (format(total, ','), format(float('%.1f' % avg), ',')))
+
 
 
 
