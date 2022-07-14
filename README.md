@@ -4,7 +4,7 @@
 
 補充教材 PDF
 https://drive.google.com/drive/folders/1BYQQsWrC-CDJrtqlOYNnK6UpNOZOR64m
-
+<pre>
 一、安裝 PIL :
 pip install pillow
 
@@ -18,3 +18,4 @@ pip install pillow
 
 三、下載 haarcascade.zip並解壓縮後將檔案放到 pycharm 的 day12/xml 資料夾內:
 四、下載 sample_image.zip並解壓縮後將檔案放到 pycharm 的 day12/image 資料夾內:
+</pre>
