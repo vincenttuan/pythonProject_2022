@@ -17,7 +17,7 @@ if __name__ == '__main__':
         win,
         text='Hello',
         bg='yellow',
-        font=('Arial, 20'),
+        font=('Arial', 20),
         width=30,
         height=5
     )
