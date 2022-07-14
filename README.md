@@ -15,7 +15,8 @@ pip install pillow
 2.2、再安裝:
      pip install opencv-python
      pip install opencv-contrib-python
+     
+三、<a href="https://github.com/vincenttuan/yzu_python_20211215/blob/main/haarcascade.zip">下載 haarcascade.zip</a>並解壓縮後將檔案放到 pycharm 的 day12/xml 資料夾內:
+四、<a href="https://github.com/vincenttuan/yzu_python_20211215/blob/main/sample_image.zip">下載 sample_image.zip</a>並解壓縮後將檔案放到 pycharm 的 day12/image 資料夾內:
 
-三、下載 haarcascade.zip並解壓縮後將檔案放到 pycharm 的 day12/xml 資料夾內:
-四、下載 sample_image.zip並解壓縮後將檔案放到 pycharm 的 day12/image 資料夾內:
 </pre>
