@@ -11,6 +11,9 @@ try:
         f.write("\nPython AI")
     except Exception as e:
         print('資料寫入失敗!', e)
+    finally:
+        print('關閉檔案')
+        f.close()
 except FileNotFoundError as fnf:
     print('檔案找不到:', fnf)
 
