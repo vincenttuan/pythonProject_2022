@@ -7,7 +7,13 @@ def update_salary(id, salary):
     cursor = conn.cursor()
     sql = 'update employee set salary=%d where id=%d' % (salary, id)
     print(sql)
-
+    # 進行資料表修改程序
+    conn = sqlite3.connect('demo.db')
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    print('修改筆數:', cursor.rowcount)
+    conn.commit()
+    conn.close()
 
 if __name__ == '__main__':
     id = int(input('請輸入 id: '))
