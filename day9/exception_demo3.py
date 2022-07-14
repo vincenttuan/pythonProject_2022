@@ -10,6 +10,8 @@ def get_index():  # 取得 index 的函式
     except ValueError as ve:
         print('輸入了非數字資料:', ve)
         return False, None
+    finally:   # 不論上述程式是否會會有錯誤發生，總是會執行的程式區段
+        print('使用者輸入完畢 !')
 
     # 利用程式邏輯驗證
     if idx < 0 or idx > len(nums) - 1:
